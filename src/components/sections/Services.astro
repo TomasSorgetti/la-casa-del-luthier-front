@@ -1,0 +1,44 @@
+---
+import ServiceCard from "../ui/cards/ServiceCard.astro";
+import repairImage from "../../assets/images/services/repair.png";
+import fabricationImage from "../../assets/images/services/craft.png";
+import woodImage from "../../assets/images/services/wood.png";
+---
+
+<section class="w-full container mx-auto py-40">
+  <div class="text-center text-font-tertiary flex flex-col items-center">
+    <span class="text-lg uppercase tracking-[0.4rem]">+20 AÑOS DE OFICIO</span>
+    <h2 class="text-5xl font-semibold">Servicios principales</h2>
+    <p class="mt-10 text-lg max-w-lg">
+      Taller de luthería, artesanal, fabricación de instrumentos musicales,
+      reparación profesional.
+    </p>
+  </div>
+
+  <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-20">
+    <li class="w-full h-full col-span-1 aspect-square">
+      <ServiceCard
+        label="+20 AÑOS DE OFICIO"
+        title="Reparación de instrumentos musicales"
+        description="taller de luthería, artesanal, fabricación de instrumentos musicales, reparación profesional."
+        image={repairImage}
+      />
+    </li>
+    <li class="w-full h-full col-span-1 aspect-square">
+      <ServiceCard
+        label="+20 AÑOS DE OFICIO"
+        title="Fabricación de instrumentos musicales"
+        description="taller de luthería, artesanal, fabricación de instrumentos musicales, reparación profesional."
+        image={fabricationImage}
+      />
+    </li>
+    <li class="w-full h-full col-span-1 aspect-square">
+      <ServiceCard
+        label="+20 AÑOS DE OFICIO"
+        title="Venta de madera e insumos para luthiers"
+        description="taller de luthería, artesanal, fabricación de instrumentos musicales, reparación profesional."
+        image={woodImage}
+      />
+    </li>
+  </ul>
+</section>

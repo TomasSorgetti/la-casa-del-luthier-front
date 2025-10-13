@@ -1,0 +1,68 @@
+---
+import { Image } from "astro:assets";
+import background from "../../assets/images/about-bg.png";
+import luthier from "../../assets/images/about.png";
+---
+
+<section class="relative overflow-hidden w-full">
+  <Image
+    src={background}
+    alt="Taller de lutheria con una guitarra clásica"
+    loading="eager"
+    class="absolute w-full h-auto"
+  />
+  <article class="py-20 relative z-10">
+    <ul
+      class="flex flex-col items-center gap-4 md:flex-row md:gap-16 md:justify-center lg:gap-32"
+    >
+      <li
+        class="text-xl text-font-secondary flex flex-col items-center text-center"
+      >
+        <span class="text-6xl font-bold">+300</span>
+        Instrumentos fabricados
+      </li>
+      <li
+        class="text-xl text-font-secondary flex flex-col items-center text-center"
+      >
+        <span class="text-6xl font-bold">+300</span>
+        Instrumentos fabricados
+      </li>
+      <li
+        class="text-xl text-font-secondary flex flex-col items-center text-center"
+      >
+        <span class="text-6xl font-bold">+300</span>
+        Instrumentos fabricados
+      </li>
+    </ul>
+
+    <article
+      class="pt-40 relative z-10 container mx-auto max-w-5xl flex items-center justify-center gap-16"
+    >
+      <Image
+        src={luthier}
+        alt="Taller de lutheria con una guitarra clásica"
+        loading="lazy"
+        class="w-1/2"
+      />
+      <div class="flex flex-col w-1/2 text-font-primary">
+        <span class="uppercase text-font-secondary text-base"
+          >+20 AÑOS DE OFICIO</span
+        >
+        <h2 class="text-font-secondary text-4xl font-semibold">
+          Sobre La Casa del Luthier
+        </h2>
+        <p class="mt-10 leading-7">
+          taller de luthería, artesanal, fabricación de instrumentos musicales,
+          reparación profesional. taller de luthería, artesanal, fabricación de
+          instrumentos musicales, reparación profesional.taller de luthería,
+          artesanal, fabricación de instrumentos musicales, reparación
+          profesional. taller de luthería, artesanal, fabricación de
+          instrumentos musicales, reparación profesional.taller de luthería,
+          artesanal, fabricación de instrumentos musicales, reparación
+          profesional. taller de luthería, artesanal, fabricación de
+          instrumentos musicales, reparación profesional.
+        </p>
+      </div>
+    </article>
+  </article>
+</section>
