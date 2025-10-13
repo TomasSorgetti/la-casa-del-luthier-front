@@ -1,4 +1,5 @@
 ---
+import MainButton, { Variant } from "./ui/buttons/MainButton.astro";
 import NavLink from "./ui/NavLink.astro";
 ---
 
@@ -8,14 +9,14 @@ import NavLink from "./ui/NavLink.astro";
     aria-label="Navegación principal"
     itemscope
     itemtype="http://schema.org/SiteNavigationElement"
-    class="transition-all duration-300 w-full flex items-center justify-center py-5 px-5 lg:px-10 lg:py-3 lg:container lg:max-w-[61.25rem] lg:mx-auto xl:max-w-6xl xl:py-4"
+    class="transition-all duration-300 w-full flex items-center justify-center py-5 px-5 lg:px-10 lg:py-3 lg:container lg:mx-auto xl:py-4 xl:px-0"
   >
-    <div class="w-full xl:max-w-7xl flex items-center justify-between lg:px-6">
+    <div class="w-full flex items-center justify-between lg:px-6">
       <a
         href="/#"
         aria-label="ir al inicio"
         itemprop="url"
-        class="text-3xl font-primary min-w-60"
+        class="text-4xl font-primary min-w-60 text-font-secondary"
       >
         La Casa del Luthier
       </a>
@@ -45,9 +46,11 @@ import NavLink from "./ui/NavLink.astro";
             >
           </li>
         </ul>
-        <a href="/#contacto" data-label="Ir al formulario de contacto">
-          Contactanos
-        </a>
+        <MainButton
+          href="/#contacto"
+          dataLabel="Ir a contacto"
+          variant={Variant.PRIMARY}>Contactanos</MainButton
+        >
       </div>
     </div>
   </nav>

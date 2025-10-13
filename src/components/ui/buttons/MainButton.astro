@@ -1,0 +1,48 @@
+---
+export enum Variant {
+  PRIMARY = "primary",
+  SECONDARY = "secondary",
+  OUTLINE = "outline",
+}
+
+export type Props = {
+  href?: string;
+  variant?: Variant;
+  dataLabel?: string;
+};
+
+const { href = "/#", variant = Variant.PRIMARY, dataLabel = "" } = Astro.props;
+
+let backgroundColors = "";
+
+switch (variant) {
+  case Variant.PRIMARY:
+    backgroundColors =
+      "bg-primary border-primary hover:bg-primary-hover hover:border-primary active:bg-primary-active active:border-primary-active";
+    break;
+  case Variant.SECONDARY:
+    backgroundColors =
+      "bg-secondary border-secondary hover:bg-secondary-hover hover:border-secondary active:bg-secondary-active active:border-secondary-active";
+    break;
+  case Variant.OUTLINE:
+    backgroundColors =
+      "bg-white/10 border-transparent hover:border-white hover:bg-white/20";
+    break;
+
+  default:
+    backgroundColors =
+      "bg-primary border-primary hover:bg-primary-hover hover:border-primary active:bg-primary-active active:border-primary-active";
+    break;
+}
+---
+
+<a
+  href={href}
+  data-label={dataLabel}
+  class:list={[
+    "px-6 py-3 w-full min-w-[12.5rem] text-center rounded border max-w-[500px] lg:w-auto text-font-primary font-semibold text-base xl:text-lg",
+    backgroundColors,
+  ]}
+>
+  <slot />
+</a>

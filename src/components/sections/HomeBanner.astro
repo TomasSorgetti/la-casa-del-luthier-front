@@ -1,0 +1,53 @@
+---
+import { Image } from "astro:assets";
+
+import background from "../../assets/images/home-banner.png";
+
+import MainButton, { Variant } from "../ui/buttons/MainButton.astro";
+---
+
+<head>
+  <link rel="preload" as="image" href={background.src} />
+</head>
+
+<section
+  aria-label="Banner principal"
+  role="banner"
+  class="relative h-screen overflow-hidden w-full"
+>
+  <Image
+    src={background}
+    alt="Taller de lutheria con una guitarra clásica"
+    loading="eager"
+    class="absolute inset-0 object-cover w-full h-full"
+  />
+  <div
+    class="relative z-10 p-8 text-white container mx-auto h-full flex flex-col justify-center items-start"
+  >
+    <span
+      class="uppercase text-base text-font-secondary translate-y-6 tracking-[0.4em]"
+      >INSTRUMENTOS DE CUERDA</span
+    >
+    <h1 class="font-primary text-[7rem] text-font-secondary">
+      La Casa del Luthier
+      <span class="sr-only"
+        >Fabricación y reparación de instrumentos musicales en Argentina.</span
+      >
+    </h1>
+    <p class="text-font-primary text-lg max-w-sm">
+      Fabricación y reparación de instrumentos musicales en Argentina.
+    </p>
+    <div class="flex flex-col gap-4 md:flex-row mt-14">
+      <MainButton
+        href="/instrumentos"
+        dataLabel="Ir a página de instrumentos"
+        variant={Variant.OUTLINE}>Instrumentos</MainButton
+      >
+      <MainButton
+        href="/maderas"
+        dataLabel="Ir a página de maderas"
+        variant={Variant.PRIMARY}>Maderas</MainButton
+      >
+    </div>
+  </div>
+</section>

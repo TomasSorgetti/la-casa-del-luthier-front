@@ -9,6 +9,19 @@
 }
 
 @theme {
+  --color-background: #f4f1ea;
+
+  --color-primary: #5b5149;
+  --color-primary-hover: #726459;
+  --color-primary-active: #423b35;
+
+  --color-secondary: #2e2a26;
+  --color-secondary-hover: #504942;
+  --color-secondary-active: #2d2924;
+
+  --color-font-primary: #f4f1ea;
+  --color-font-secondary: #d8b383;
+
   --font-primary: "Italianno", sans-serif;
   --font-secondary: "Inter", sans-serif;
 }
