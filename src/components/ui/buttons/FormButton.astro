@@ -1,0 +1,14 @@
+---
+const { type = "submit", dataLabel, extraClasses } = Astro.props;
+---
+
+<button
+  type={type}
+  data-label={dataLabel}
+  class:list={[
+    "w-full bg-background rounded text-font-tertiary font-semibold h-12 cursor-pointer",
+    extraClasses,
+  ]}
+>
+  <slot />
+</button>

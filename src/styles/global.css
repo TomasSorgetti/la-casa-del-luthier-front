@@ -26,3 +26,8 @@
   --font-primary: "Italianno", sans-serif;
   --font-secondary: "Inter", sans-serif;
 }
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-font-primary);
+}
