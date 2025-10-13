@@ -1,0 +1,37 @@
+---
+export enum Target {
+  BLANK = "_blank",
+  SELF = "_self",
+  PARENT = "_parent",
+  TOP = "_top",
+}
+export type Props = {
+  href: string;
+  target?: Target;
+  extraClasses?: string;
+  ariaLabel?: string;
+  isExternal?: boolean;
+};
+
+const {
+  href,
+  target = Target.SELF,
+  extraClasses,
+  ariaLabel,
+  isExternal,
+} = Astro.props;
+
+const rel =
+  target === Target.BLANK || isExternal ? "noopener noreferrer" : undefined;
+---
+
+<a
+  href={href}
+  class:list={["font-normal text-base", extraClasses]}
+  target={target}
+  rel={rel}
+  aria-label={ariaLabel}
+  itemprop="url"
+>
+  <slot />
+</a>

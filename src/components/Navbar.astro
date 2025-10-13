@@ -1,0 +1,54 @@
+---
+import NavLink from "./ui/NavLink.astro";
+---
+
+<header id="header" class="fixed top-0 z-90 w-full px-4 xl:px-0">
+  <nav
+    id="navbar"
+    aria-label="Navegación principal"
+    itemscope
+    itemtype="http://schema.org/SiteNavigationElement"
+    class="transition-all duration-300 w-full flex items-center justify-center py-5 px-5 lg:px-10 lg:py-3 lg:container lg:max-w-[61.25rem] lg:mx-auto xl:max-w-6xl xl:py-4"
+  >
+    <div class="w-full xl:max-w-7xl flex items-center justify-between lg:px-6">
+      <a
+        href="/#"
+        aria-label="ir al inicio"
+        itemprop="url"
+        class="text-3xl font-primary min-w-60"
+      >
+        La Casa del Luthier
+      </a>
+
+      <div
+        class="hidden lg:flex lg:items-center lg:justify-end lg:gap-x-12 lg:w-full"
+      >
+        <ul
+          class="lg:flex lg:items-center lg:justify-center lg:pl-10 lg:gap-x-12 lg:w-full"
+          role="list"
+        >
+          <li>
+            <NavLink href="/#" ariaLabel="ir a inicio">Inicio</NavLink>
+          </li>
+          <li>
+            <NavLink href="/blog" ariaLabel="ir al blog">Blog</NavLink>
+          </li>
+          <li>
+            <NavLink href="/maderas" ariaLabel="ir a página de maderas"
+              >Maderas</NavLink
+            >
+          </li>
+          <li>
+            <NavLink
+              href="/instrumentos"
+              ariaLabel="ir a página de instrumentos">Instrumentos</NavLink
+            >
+          </li>
+        </ul>
+        <a href="/#contacto" data-label="Ir al formulario de contacto">
+          Contactanos
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>

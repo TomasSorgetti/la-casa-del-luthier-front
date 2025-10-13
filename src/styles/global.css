@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "Italianno";
+  src: url("fonts/Italianno-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-primary: "Italianno", sans-serif;
+  --font-secondary: "Inter", sans-serif;
+}
