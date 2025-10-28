@@ -1,13 +1,19 @@
 ---
 import { Image } from "astro:assets";
+
 import background from "../../assets/images/contact.png";
 import CustomInput from "../ui/form/CustomInput.astro";
 import CustomTextarea from "../ui/form/CustomTextarea.astro";
 import FormButton from "../ui/buttons/FormButton.astro";
+
+import WhatsappIcon from "../../assets/icons/whatsapp.svg";
+import InstagramIcon from "../../assets/icons/instagram.svg";
+import FacebookIcon from "../../assets/icons/facebook.svg";
+import GmailIcon from "../../assets/icons/gmail.svg";
 ---
 
 <section
-  class="relative w-full h-[80vh] overflow-hidden py-32 flex items-center"
+  class="relative w-full h-[90vh] overflow-hidden py-32 flex items-center"
 >
   <div
     class="container px-4 mx-auto relative z-10 flex justify-between items-center gap-32 text-font-primary"
@@ -24,11 +30,32 @@ import FormButton from "../ui/buttons/FormButton.astro";
         reparación profesional. taller de luthería, artesanal, fabricación de
         instrumentos musicales, reparación profesional.taller de luthería.
       </p>
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+
+      <ul class="flex items-center gap-4 mt-10">
+        <li>
+          <a href="#" target="_blank" data-label="Ir al whatsapp de la empresa">
+            <WhatsappIcon class="size-12" />
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            target="_blank"
+            data-label="Ir al Instagram de la empresa"
+          >
+            <InstagramIcon class="size-12" />
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank" data-label="Ir al Facebook de la empresa">
+            <FacebookIcon class="size-12" />
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank" data-label="Ir al Gmail de la empresa">
+            <GmailIcon class="size-12" />
+          </a>
+        </li>
       </ul>
     </div>
 
